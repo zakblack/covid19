@@ -37,7 +37,7 @@ export default async (_, response: NowResponse) => {
     countries: "https://covid19.zakaria.tech/api/countries",
     countryDetail: {
       pattern: "https://covid19.zakaria.tech/api/countries/[country]",
-      example: "https://covid19.mathdro.id/api/countries/Morocco"
+      example: "https://covid19.zakaria.tech/api/countries/Morocco"
     },
     lastUpdate
   });
