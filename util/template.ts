@@ -170,13 +170,13 @@ export function getHtml(parsedReq: ParsedRequest) {
       : ""
   }
       <div class="wrapper">
-        <div class="data-wrapper font-inter" style="font-weight: bold; font-size: 2rem; justify-content: flex-start; padding: 2rem 2rem; display: flex;flex-direction: column;align-items: flex-start;" align="right">
-          <h1 style="margin: 0;font-size: 2rem;font-weight: normal; letter-spacing: 1px;">فيروس كورونا</h1>
-          <h2 style="margin: 0;">${countryRegion || "L3alam kamel"}</h2>
+        <div class="data-wrapper font-inter" style="font-weight: bold; font-size: 2rem; justify-content: flex-start; padding: 2rem 2rem; display: flex;flex-direction: column;align-items: flex-start;">
+          <h1 style="margin: 0;font-size: 2rem;font-weight: normal; letter-spacing: 1px;">COVID-19 API</h1>
+          <h2 style="margin: 0;">${countryRegion || "Global"}</h2>
         </div>
         <div class="data-wrapper" style="justify-content: space-between; flex: 1; padding: 0 2rem;">
-          <div class="data" align="right">
-            <div class="heading font-inter">الحالات المؤكدة</div>
+          <div class="data">
+            <div class="heading font-inter">Confirmed</div>
             <div class="value font-inter">${confirmed}</div>
             ${
               dailyCases.length > 0
@@ -189,24 +189,24 @@ export function getHtml(parsedReq: ParsedRequest) {
             }
           </div>
 
-          <div class="data" align="right">
-            <div class="heading font-inter">المتعافون</div>
+          <div class="data">
+            <div class="heading font-inter">Recovered</div>
             <div class="value font-inter" style="color:green;">${recovered}</div>
             <div class="heading font-inter" style="font-size: 1.25rem;background: green;color: white;line-height: 1.5;padding: 0 0.5rem;"><b style="margin: 0;">${Math.trunc(
               (recovered / confirmed) * 100
-            )}%</b> معدل الشفاء</div>
+            )}%</b> recovery rate</div>
           </div>
 
           <div class="data">
-            <div class="heading font-inter">الوفيات</div>
+            <div class="heading font-inter">Deaths</div>
             <div class="value font-inter" style="color:red;">${deaths}</div>
             <div class="heading font-inter" style="font-size: 1.25rem;background: red;color: white;line-height: 1.5;padding: 0 0.5rem;"><b style="margin: 0; ">${Math.trunc(
               (deaths / confirmed) * 100
-            )}%</b> معدل الوفيات</div>
+            )}%</b> fatality rate</div>
           </div>
         </div>
         <div class="data-wrapper font-inter" style="margin: 2rem auto;">
-          <b>${lastUpdate}</b> :آخر تحديث. With ♥️ by <b>Zakaria GHARIB</b>
+          Last Update: <b>${lastUpdate}</b>. With ♥️ by <b>Zakaria GHARIB</b>
         <div>
       </div>
   </body>
